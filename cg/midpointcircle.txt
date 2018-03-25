@@ -1,0 +1,194 @@
+#include<stdio.h>
+#include<graphics.h>
+ 
+void drawcircle(int x0, int y0, int radius)
+{
+    int x = radius;
+    int y = 0;
+    int err = 0;
+ 
+    while (x >= y)
+    {
+    putpixel(x0 + x, y0 + y, 7);
+    putpixel(x0 + y, y0 + x, 7);
+    putpixel(x0 - y, y0 + x, 7);
+    putpixel(x0 - x, y0 + y, 7);
+    putpixel(x0 - x, y0 - y, 7);
+    putpixel(x0 - y, y0 - x, 7);
+    putpixel(x0 + y, y0 - x, 7);
+    putpixel(x0 + x, y0 - y, 7);
+ 
+    if (err <= 0)
+    {
+        y += 1;
+        err += 2*y + 1;
+    }
+ 
+    if (err > 0)
+    {
+        x -= 1;
+        err -= 2*x + 1;
+    }
+    }
+}
+ 
+int main()
+{
+    int gdriver=DETECT, gmode, error, x, y, r;
+    initgraph(&gdriver, &gmode, "c:\\turboc3\\bgi");
+ 
+    printf("Enter radius of circle: ");
+    scanf("%d", &r);
+ 
+    printf("Enter co-ordinates of center(x and y): ");
+    scanf("%d%d", &x, &y);
+    drawcircle(x, y, r);
+ 
+    return 0;
+}
+Program for Midpoint Circle Algorithm in C++
+
+#include<iostream.h>
+#include<graphics.h>
+
+void drawcircle(int x0, int y0, int radius)
+{
+    int x = radius;
+    int y = 0;
+    int err = 0;
+
+    while (x >= y)
+    {
+	putpixel(x0 + x, y0 + y, 7);
+	putpixel(x0 + y, y0 + x, 7);
+	putpixel(x0 - y, y0 + x, 7);
+	putpixel(x0 - x, y0 + y, 7);
+	putpixel(x0 - x, y0 - y, 7);
+	putpixel(x0 - y, y0 - x, 7);
+	putpixel(x0 + y, y0 - x, 7);
+	putpixel(x0 + x, y0 - y, 7);
+
+	if (err <= 0)
+	{
+	    y += 1;
+	    err += 2*y + 1;
+	}
+
+	if (err > 0)
+	{
+	    x -= 1;
+	    err -= 2*x + 1;
+	}
+    }
+}
+
+int main()
+{
+	int gdriver=DETECT, gmode, error, x, y, r;
+	initgraph(&gdriver, &gmode, "c:\\turboc3\\bgi");
+
+	cout<<"Enter radius of circle: ";
+	cin>>r;
+
+	cout<<"Enter co-ordinates of center(x and y): ";
+	cin>>x>>y;
+	drawcircle(x, y, r);
+
+	return 0;
+}
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+#include<iostream.h>
+#include<graphics.h>
+ 
+void drawcircle(int x0, int y0, int radius)
+{
+    int x = radius;
+    int y = 0;
+    int err = 0;
+ 
+    while (x >= y)
+    {
+    putpixel(x0 + x, y0 + y, 7);
+    putpixel(x0 + y, y0 + x, 7);
+    putpixel(x0 - y, y0 + x, 7);
+    putpixel(x0 - x, y0 + y, 7);
+    putpixel(x0 - x, y0 - y, 7);
+    putpixel(x0 - y, y0 - x, 7);
+    putpixel(x0 + y, y0 - x, 7);
+    putpixel(x0 + x, y0 - y, 7);
+ 
+    if (err <= 0)
+    {
+        y += 1;
+        err += 2*y + 1;
+    }
+ 
+    if (err > 0)
+    {
+        x -= 1;
+        err -= 2*x + 1;
+    }
+    }
+}
+ 
+int main()
+{
+    int gdriver=DETECT, gmode, error, x, y, r;
+    initgraph(&gdriver, &gmode, "c:\\turboc3\\bgi");
+ 
+    cout<<"Enter radius of circle: ";
+    cin>>r;
+ 
+    cout<<"Enter co-ordinates of center(x and y): ";
+    cin>>x>>y;
+    drawcircle(x, y, r);
+ 
+    return 0;
+}
